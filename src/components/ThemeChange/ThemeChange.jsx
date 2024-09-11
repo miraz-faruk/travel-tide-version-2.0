@@ -10,7 +10,7 @@ const ThemeChange = () => {
 
     useEffect(() => {
         if (isDarkMode) {
-            document.documentElement.classList.add('dark'); // Adds 'dark' class to root element
+            document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark');
         }
@@ -19,9 +19,9 @@ const ThemeChange = () => {
     return (
         <button
             onClick={toggleTheme}
-            className="p-2 bg-gray-200 rounded dark:bg-gray-800 text-black dark:text-white"
+            className="px-4 bg-gray-200 rounded-full dark:bg-gray-800 text-black dark:text-white"
         >
-            {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            {isDarkMode ? "☾" : "☀"}
         </button>
     );
 };

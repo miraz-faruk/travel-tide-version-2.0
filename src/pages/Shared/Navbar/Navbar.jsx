@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider.jsx";
+import ThemeChange from "../../../components/ThemeChange/ThemeChange.jsx";
 
 const Navbar = () => {
 
@@ -63,6 +64,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <div className="mr-2">
+                    <ThemeChange></ThemeChange>
+                </div>
                 {
                     user ?
                         <div className="flex flex-row-reverse">
@@ -81,7 +85,6 @@ const Navbar = () => {
                             <button className="btn bg-[#00308E] text-white font-bold">Login</button>
                         </Link>
                 }
-
             </div>
         </div>
     );
