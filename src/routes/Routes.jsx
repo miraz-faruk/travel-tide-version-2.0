@@ -5,6 +5,8 @@ import MagicPage from "../MagicPage/MagicPage";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import About from "../pages/About/About";
+import PrivateRoutes from "./PrivateRoutes";
+import AddTouristSpot from "../pages/AddTouristSpot/AddTouristSpot";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +24,12 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>
+            },
+            {
+                path: "/add-tourist-spot",
+                element: <PrivateRoutes>
+                    <AddTouristSpot></AddTouristSpot>
+                </PrivateRoutes>
             },
             {
                 path: "/magic-page",
