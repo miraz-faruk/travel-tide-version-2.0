@@ -8,6 +8,7 @@ import About from "../pages/About/About";
 import PrivateRoutes from "./PrivateRoutes";
 import AddTouristSpot from "../pages/AddTouristSpot/AddTouristSpot";
 import SpotDetails from "../pages/SpotDetails/SpotDetails";
+import AllTouristSpots from "../pages/AllTouristSpots/AllTouristSpots";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
                 element: <PrivateRoutes>
                     <SpotDetails></SpotDetails>
                 </PrivateRoutes>
+            },
+            {
+                path: "/all-tourist-spots",
+                element: <AllTouristSpots></AllTouristSpots>
             },
             {
                 path: "/magic-page",
