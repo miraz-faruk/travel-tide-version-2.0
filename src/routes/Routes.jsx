@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import MagicPage from "../MagicPage/MagicPage";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import About from "../pages/About/About";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path: "/magic-page",
                 element: <MagicPage></MagicPage>
+            },
+            {
+                path: "/about",
+                element: <About></About>
             }
         ]
     },
