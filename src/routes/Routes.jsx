@@ -7,6 +7,7 @@ import Register from "../pages/Register/Register";
 import About from "../pages/About/About";
 import PrivateRoutes from "./PrivateRoutes";
 import AddTouristSpot from "../pages/AddTouristSpot/AddTouristSpot";
+import SpotDetails from "../pages/SpotDetails/SpotDetails";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,12 @@ const router = createBrowserRouter([
                 path: "/add-tourist-spot",
                 element: <PrivateRoutes>
                     <AddTouristSpot></AddTouristSpot>
+                </PrivateRoutes>
+            },
+            {
+                path: "/spot-details/:id",
+                element: <PrivateRoutes>
+                    <SpotDetails></SpotDetails>
                 </PrivateRoutes>
             },
             {

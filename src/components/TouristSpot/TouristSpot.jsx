@@ -1,18 +1,14 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
 
-const AllTouristSpot = ({ touristSpot }) => {
+const TouristSpot = ({ touristSpot }) => {
 
     const navigate = useNavigate();
-
-    // Ensure that touristSpot is defined before destructuring
-    if (!touristSpot) {
-        return null; // or render a placeholder/loading state
-    }
 
     const { _id, image, spotName, country, location, description, cost, visitors } = touristSpot;
 
     const handleViewDetails = () => {
+        console.log(_id);
         navigate(`/spot-details/${_id}`, { state: { touristSpot } });
     }
     return (
@@ -39,7 +35,7 @@ const AllTouristSpot = ({ touristSpot }) => {
     );
 };
 
-AllTouristSpot.propTypes = {
+TouristSpot.propTypes = {
     touristSpot: PropTypes.shape({
         _id: PropTypes.string.isRequired,
         image: PropTypes.string.isRequired,
@@ -52,4 +48,4 @@ AllTouristSpot.propTypes = {
     }).isRequired,
 };
 
-export default AllTouristSpot;
+export default TouristSpot;

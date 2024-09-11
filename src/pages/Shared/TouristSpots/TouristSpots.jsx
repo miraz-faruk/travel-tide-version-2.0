@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import AllTouristSpot from "../../../components/AllTouristSpot/AllTouristSpot";
+import TouristSpot from "../../../components/TouristSpot/TouristSpot";
 
-const AllTouristSpots = () => {
+const TouristSpots = () => {
 
     const [spots, setSpots] = useState([]);
 
@@ -18,14 +18,14 @@ const AllTouristSpots = () => {
             <h2 className="text-4xl font-semibold text-purple-700 text-center mb-10">Tourists Spots</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {
-                    spots?.map(touristSpot => <AllTouristSpot
+                    spots?.map(touristSpot => <TouristSpot
                         key={touristSpot._id}
                         touristSpot={touristSpot}>
-                    </AllTouristSpot>)
+                    </TouristSpot>)
                 }
             </div>
         </div>
     );
 };
 
-export default AllTouristSpots;
+export default TouristSpots;
