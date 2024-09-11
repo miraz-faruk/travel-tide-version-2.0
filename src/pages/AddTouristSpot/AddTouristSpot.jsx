@@ -1,4 +1,4 @@
-// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 
 const AddTouristSpot = () => {
 
@@ -23,26 +23,27 @@ const AddTouristSpot = () => {
         console.log(newSpot);
 
         // send data to the server
-        // fetch('', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(newSpot)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if (data.insertedId) {
-        //             Swal.fire({
-        //                 title: 'Success!',
-        //                 text: 'User Added Successfully',
-        //                 icon: 'success',
-        //                 confirmButtonText: 'Cool'
-        //             })
-        //         }
-        //     })
-    }
+        fetch('http://localhost:5001/tourist-spot', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newSpot)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'User Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    });
+                    form.reset();
+                }
+            });
+    };
     return (
         <div className="container mx-auto mt-10 bg-zinc-100 rounded-xl p-8">
             <h2 className="text-3xl font-bold text-center mb-8 text-purple-700">Add Your Tourist Spot</h2>
