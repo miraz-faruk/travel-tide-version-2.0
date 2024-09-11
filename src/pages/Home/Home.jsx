@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import ThemeChange from "../../components/ThemeChange/ThemeChange";
 
 const Home = () => {
     return (
-        <div>
-            <h2 className="text-3xl">This is home</h2>
+        <div className="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen">
+            <ThemeChange></ThemeChange>
             {/* Magic page button */}
             <div className="flex justify-center mt-10">
                 <Link to="/magic-page">
