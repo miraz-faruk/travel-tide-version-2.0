@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Slider from "../Shared/Slider/Slider";
 import TouristSpots from "../Shared/TouristSpots/TouristSpots";
+import Countries from "../Shared/Countries/Countries";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
                     <button className="btn btn-outline btn-error">Click here to see the magic</button>
                 </Link>
             </div>
+            <Countries></Countries>
         </div>
     );
 };

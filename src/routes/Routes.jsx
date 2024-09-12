@@ -11,6 +11,7 @@ import SpotDetails from "../pages/SpotDetails/SpotDetails";
 import AllTouristSpots from "../pages/AllTouristSpots/AllTouristSpots";
 import MyList from "../pages/MyList/MyList";
 import UpdateSpot from "../pages/UpdateSpot/UpdateSpot";
+import CountrySpots from "../pages/CountrySpots/CountrySpots";
 
 const router = createBrowserRouter([
     {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
                 element: <PrivateRoutes>
                     <UpdateSpot></UpdateSpot>
                 </PrivateRoutes>
+            },
+            {
+                path: "/countries/:countryName/spots",
+                element: <CountrySpots></CountrySpots>
             },
             {
                 path: "/magic-page",
